@@ -1,0 +1,14 @@
+baseURL = 'https://tflester.com/'
+locale = 'en-us'
+title = 'Tim Lester'
+theme = 'ananke'
+
+[menu]
+  [[menu.main]]
+    name = 'About'
+    url = '/about/'
+    weight = 10
+  [[menu.main]]
+    name = 'Contact'
+    url = '/contact/'
+    weight = 20
