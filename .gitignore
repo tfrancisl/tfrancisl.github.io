@@ -5,3 +5,4 @@ result
 result/
 hugo_stats.json
 .direnv/
+_vendor/
