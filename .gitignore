@@ -1,5 +1,7 @@
 /public/
 /resources/_gen/
 /assets/jsconfig.json
+result
+result/
 hugo_stats.json
 .direnv/
