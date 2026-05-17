@@ -19,3 +19,7 @@ title = 'Tim Lester'
     ignoreConfig = false
     ignoreImports = false
     path = 'github.com/gohugo-ananke/ananke/v2'
+
+[params]
+    [params.ananke]
+    show_recent_posts = false

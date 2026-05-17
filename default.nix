@@ -6,8 +6,8 @@ in
 rec {
   shells = {
     default = pkgs.mkShell {
-      packages =  [ pkgs.npins pkgs.go pkgs.git ];
-      buildInputs = [ pkgs.hugo ];
+      packages =  [ pkgs.npins ];
+      buildInputs = [ pkgs.hugo pkgs.go pkgs.git ];
     };
   };
   package = {
