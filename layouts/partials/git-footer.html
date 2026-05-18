@@ -1,0 +1,18 @@
+{{ with .GitInfo }}
+  {{/* Derive creation date: front matter date if set, else oldest git commit */}}
+  {{ $created := $.Date }}
+  {{ if $created.IsZero }}
+    {{ with .Ancestors }}
+      {{ $created = (index (last 1 .) 0).AuthorDate }}
+    {{ else }}
+      {{ $created = $.GitInfo.AuthorDate }}
+    {{ end }}
+  {{ end }}
+<p>
+  Created {{ $created.Format "2006-01-02" }} ·
+  Updated {{ .AuthorDate.Format "2006-01-02" }}
+  (<a href="{{ site.Params.githubRepo }}/commit/{{ .Hash }}">{{ .AbbreviatedHash }}</a>)
+</p>
+{{ else }}
+<p>{{ .Date.Format "2006-01-02" }}</p>
+{{ end }}

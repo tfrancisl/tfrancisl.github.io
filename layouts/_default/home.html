@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{ .Content }}
+
+{{ $blog := site.GetPage "/blog" }}
+{{ with $blog }}
+  {{ with .Pages }}
+  <section>
+    <h2>Recent Posts</h2>
+    <ul>
+      {{ range first 10 (sort . "Date" "desc") }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+{{ end }}
+
+{{ $featured := where site.RegularPages "Params.homeFeature" true }}
+{{ with $featured }}
+<section>
+  <h2>Featured</h2>
+  <ul>
+    {{ range . }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+{{ end }}
