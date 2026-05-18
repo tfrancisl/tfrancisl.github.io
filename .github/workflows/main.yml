@@ -20,7 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          submodules: recursive
           fetch-depth: 0
       - uses: samueldr/lix-gha-installer-action@7b7f14d320d6aacfb65bd1ef761566b3b69e474c # v2026-02-22
       - uses: actions/configure-pages@v6
