@@ -1,8 +1,8 @@
-+++
-date = '2026-05-17T18:29:17-04:00'
-draft = false
-title = 'How This Website Works'
-+++
+---
+date: '2026-05-17T18:29:17-04:00'
+draft: false
+title: 'How This Website Works'
+---
 
 This website is statically generated with [Hugo](https://gohugo.io/) and deployed as a GitHub Page. I make use of the free GitHub Actions usage offered to public repositories.
 
