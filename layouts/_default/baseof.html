@@ -22,6 +22,16 @@
 
   <footer>
     {{ partial "git-footer.html" . }}
+    <p>
+        All Rights Reserved · {{ dateFormat "2006" now }} · {{ .Site.Title }}
+    </p>
+    <p>
+      Built with ··
+      <a href="https://gohugo.io/">Hugo</a> ·
+      <a href="https://simplecss.org/">simple.css</a> ·
+      <a href="https://nixos.org/">Nix</a> ·
+      <a href="https://github.com/actions">GitHub Actions</a>
+    </p>
   </footer>
 </body>
 </html>
