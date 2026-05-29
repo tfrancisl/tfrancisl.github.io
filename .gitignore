@@ -6,3 +6,6 @@ result/
 hugo_stats.json
 .direnv/
 _vendor/
+
+# pdfs are always rendered from typst
+*.pdf

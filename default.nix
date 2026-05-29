@@ -2,12 +2,18 @@
 let
   sources = import ./npins;
   pkgs = import sources.nixpkgs { };
-  nativeBuildInputs = [ pkgs.hugo pkgs.git ];
+  nativeBuildInputs = [
+    pkgs.hugo
+    pkgs.git
+    pkgs.typst # for rendered documents
+  ];
 in
 rec {
   shells = {
-    default = pkgs.mkShell {
-      packages = [ pkgs.npins ];
+    default = pkgs.mkShellNoCC {
+      packages = [
+        pkgs.npins
+      ];
       inherit nativeBuildInputs;
     };
   };
@@ -24,7 +30,10 @@ rec {
           base != "public" && base != "result" && base != ".direnv";
       };
       inherit nativeBuildInputs;
-      buildPhase = "hugo build --gc --minify";
+      buildPhase = ''
+          typst compile documents/resume.typ content/resume.pdf
+          hugo build --gc --minify
+      '';
       installPhase = "cp -r public $out";
     };
   };
