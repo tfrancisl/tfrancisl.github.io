@@ -4,25 +4,33 @@ title = 'Tim Lester'
 enableGitInfo = true
 
 [params]
-  githubRepo = 'https://github.com/tfrancisl/tfrancisl.github.io'
+githubRepo = 'https://github.com/tfrancisl/tfrancisl.github.io'
 
 [params.blog]
-  showToc = true
+showToc = true
 
 [markup.tableOfContents]
-  startLevel = 2
-  endLevel = 4
+startLevel = 2
+endLevel = 4
 
 [menu]
-  [[menu.main]]
-    name = 'About'
-    url = '/about/'
-    weight = 10
-  [[menu.main]]
-    name = 'Blog'
-    url = '/blog/'
-    weight = 20
-  [[menu.main]]
-    name = 'Contact'
-    url = '/contact/'
-    weight = 30
+[[menu.main]]
+name = 'About'
+url = '/about/'
+weight = 1
+[[menu.main]]
+name = 'Blog'
+url = '/blog/'
+weight = 15
+[[menu.main]]
+name = 'Video Game Reviews'
+url = '/games/'
+weight = 35
+[[menu.main]]
+name = 'Interesting Projects'
+url = '/repos/'
+weight = 45
+[[menu.main]]
+name = 'Contact'
+url = '/contact/'
+weight = 100

@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{ $repos := site.GetPage "/repos" }}
+{{ with $repos }}
+<article>
+<h2>{{ .Title }}</h2>
+<section>
+{{ .Content }}
+</section>
+<ul>
+    {{ range .Pages }}
+    <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a> @
+    <a href="{{ .Params.ref }}">{{ .Params.ref }}</a>
+    </li>
+    {{ end }}
+</ul>
+</article>
+{{ end }}
+{{ end }}

@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $blog := site.GetPage "/blog" }}
 {{ with $blog }}
-<section>
+<article>
 <h2>{{ .Title }}</h2>
 <ul>
     {{ range .Pages }}
@@ -11,6 +11,6 @@
     </li>
     {{ end }}
 </ul>
-</section>
+</article>
 {{ end }}
 {{ end }}

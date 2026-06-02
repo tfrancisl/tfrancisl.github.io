@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  <section>
+      <p><a href={{ .Params.ref }}>Check out {{.Title}}</a></p>
+      <p>Topics: {{ delimit .Params.topic ", "}} </p>
+  </section>
+
+  <section>
+      {{ .Content }}
+  </section>
+</article>
+{{ end }}
