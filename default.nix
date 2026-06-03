@@ -13,6 +13,8 @@ rec {
     default = pkgs.mkShellNoCC {
       packages = [
         pkgs.npins
+        pkgs.just
+        pkgs.gotmplfmt
       ];
       inherit nativeBuildInputs;
     };

@@ -1,18 +1,20 @@
-{{ define "main" }}
-{{ $games := site.GetPage "/games" }}
-{{ with $games }}
-<article>
-<h2>{{ .Title }}</h2>
-<section>
-{{ .Content }}
-</section>
-<ul>
-    {{ range .Pages }}
-    <li>
-    <i><a href="{{ .RelPermalink }}">{{ .Title }}</a></i> by {{ .Params.Developer }}
-    </li>
-    {{ end }}
-</ul>
-</article>
-{{ end }}
-{{ end }}
+{{define "main"}}
+	{{$games := site.GetPage "/games"}}
+	{{with $games}}
+		<article>
+			<h2>
+				{{.Title}}
+			</h2>
+			<section>
+				{{.Content}}
+			</section>
+			<ul>
+				{{range .Pages}}
+					<li>
+						<i><a href="{{ .RelPermalink }}">{{.Title}}</a></i> by {{.Params.Developer}}
+					</li>
+				{{end}}
+			</ul>
+		</article>
+	{{end}}
+{{end}}

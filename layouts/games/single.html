@@ -1,10 +1,23 @@
-{{ define "main" }}
-<article>
-  <h1>{{ .Title }}</h1>
-  <p>Date of Review: <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
-  <p>Developer: {{ .Params.developer }}</p>
-  <p>Publisher: {{ .Params.publisher }}</p>
-  <p>Genre(s): {{ delimit .Params.genre ", " }}</p>
-  {{ .Content }}
-</article>
-{{ end }}
+{{define "main"}}
+	<article>
+		<h1>
+			{{.Title}}
+		</h1>
+		<p>
+			Date of Review: 
+			<time datetime="{{ .Date.Format "2006-01-02" }}">
+				{{.Date.Format "January 2, 2006"}}
+			</time>
+		</p>
+		<p>
+			Developer: {{.Params.developer}}
+		</p>
+		<p>
+			Publisher: {{.Params.publisher}}
+		</p>
+		<p>
+			Genre(s): {{delimit .Params.genre ", "}}
+		</p>
+		{{.Content}}
+	</article>
+{{end}}

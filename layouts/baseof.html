@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.Locale | default "en" }}">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
-  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+	{{if .IsHome}}
+		{{site.Title}}
+	{{else}}
+		{{.Title}} · {{site.Title}}
+	{{end}}
+</title>
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 </head>
 <body>
-  <header>
-    <h1><a href="/">{{ site.Title }}</a></h1>
-    <nav>
-      {{ range site.Menus.main }}
-        <a href="{{ .URL }}">{{ .Name }}</a>
-      {{ end }}
-    </nav>
-  </header>
+<header>
+	<h1>
+		<a href="/">{{site.Title}}</a>
+	</h1>
+	<nav>
+	{{range site.Menus.main}}
+		<a href="{{ .URL }}">{{.Name}}</a>
+	{{end}}
+	</nav>
+</header>
+<main>
 
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
-
-  <footer>
-    {{ partial "git-footer.html" . }}
-    <p>
-        All Rights Reserved · {{ dateFormat "2006" now }} · {{ .Site.Title }}
-    </p>
-    <p>
-      Built with ··
-      <a href="https://gohugo.io/">Hugo</a> ·
-      <a href="https://simplecss.org/">simple.css</a> ·
-      <a href="https://nixos.org/">Nix</a> ·
-      <a href="https://github.com/actions">GitHub Actions</a>
-    </p>
-  </footer>
+{{block "main" .}}
+{{end}}
+</main>
+<footer>
+	{{partial "git-footer.html" .}}
+	<p>
+		All Rights Reserved · {{dateFormat "2006" now}}
+		 · {{.Site.Title}}
+	</p>
+	<p>
+		Built with ··<a href="https://gohugo.io/">Hugo</a> ·<a href="https://simplecss.org/">simple.css</a> ·<a href="https://nixos.org/">
+		Nix</a> ·<a href="https://github.com/actions">GitHub Actions</a>
+	</p>
+</footer>
 </body>
 </html>
