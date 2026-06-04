@@ -1,6 +1,9 @@
 {{$currentCommitInfo := .GitInfo}}
 <p>
-	Updated {{$currentCommitInfo.CommitDate.Format "2006-01-02"}}
-	(<a href="{{ site.Params.githubRepo }}/commit/{{ $currentCommitInfo.Hash }}">{{$currentCommitInfo.AbbreviatedHash}}
-	</a>)
-</p>
+	{{if $currentCommitInfo}}
+		Updated {{$currentCommitInfo.CommitDate.Format "2006-01-02"}}
+		(<a href="{{ site.Params.githubRepo }}/commit/{{ $currentCommitInfo.Hash }}">{{$currentCommitInfo.AbbreviatedHash}}
+		</a>)
+	{{else}}
+	</p>
+{{end}}
