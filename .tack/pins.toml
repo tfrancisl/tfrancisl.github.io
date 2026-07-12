@@ -1,0 +1,6 @@
+[all_follow]
+nixpkgs = "nixpkgs"
+
+[inputs]
+[inputs.nixpkgs]
+url = "github:NixOS/nixpkgs/nixpkgs-unstable"
