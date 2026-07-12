@@ -1,6 +1,6 @@
 ---
 date: '2026-07-12T10:28:43-04:00'
-draft: true
+draft: false
 title: 'Home Lab with NixOS - RPi4, pi-hole, gatus'
 ---
 
