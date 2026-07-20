@@ -3,6 +3,7 @@ let
   inherit (inputs) pkgs;
 in
 pkgs.mkShellNoCC {
+  TACK_DIR = "./.tack"; # my inputs.nix confuses tack
   packages = [
     pkgs.just
     pkgs.tack
