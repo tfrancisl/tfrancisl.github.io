@@ -4,6 +4,8 @@ draft: false
 title: 'Why Does Palantir CEO Alex Karp Continue to do Media Interviews on Cocaine?'
 ---
 
+{{< disclaimer >}}
+
 This is a little different than my usual blog posts so far. I figured my thoughts on this were worth sharing.
 
 ## What is Palantir?
