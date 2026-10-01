@@ -1,0 +1,7 @@
+{{ with site.GetPage "/disclaimer" }}
+<aside class="disclaimer">
+    {{ .Content }}
+</aside>
+{{ else }}
+    {{ warnf "disclaimer shortcode: content/disclaimer.md not found" }}
+{{ end }}
