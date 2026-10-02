@@ -1,6 +1,7 @@
 ---
 date: '2026-08-23T08:50:01-04:00'
 draft: false
+kind: technical
 title: 'How I Nix'
 ---
 

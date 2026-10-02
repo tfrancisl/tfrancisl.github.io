@@ -1,6 +1,7 @@
 ---
 date: '2026-10-01T17:30:17-04:00'
 draft: false
+kind: commentary
 title: 'Why Does Palantir CEO Alex Karp Continue to do Media Interviews on Cocaine?'
 ---
 

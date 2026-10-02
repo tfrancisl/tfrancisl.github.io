@@ -1,6 +1,7 @@
 ---
 date: '2026-05-17T18:29:17-04:00'
 draft: false
+kind: technical
 title: 'How This Website Works'
 ---
 

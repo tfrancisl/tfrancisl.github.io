@@ -1,20 +1,26 @@
 {{define "main"}}
-	{{$blog := site.GetPage "/blog"}}
-	{{with $blog}}
-		<article>
-			<h2>
-				{{.Title}}
-			</h2>
+	{{$posts := sort .Pages "Date" "desc"}}
+	{{$technical := where $posts "Params.kind" "eq" "technical"}}
+	{{$commentary := where $posts "Params.kind" "eq" "commentary"}}
+	<article>
+		<h2>
+			Blog
+		</h2>
+		<section>
+			<h3>
+				Technical
+			</h3>
 			<ul>
-				{{range .Pages}}
-					<li>
-						<a href="{{ .RelPermalink }}">{{.Title}}</a>
-						<time datetime="{{ .Date.Format "2006-01-02" }}">
-							{{.Date.Format "January 2, 2006"}}
-						</time>
-					</li>
-				{{end}}
+				{{partial "post-list.html" $technical}}
 			</ul>
-		</article>
-	{{end}}
+		</section>
+		<section>
+			<h3>
+				Commentary
+			</h3>
+			<ul>
+				{{partial "post-list.html" $commentary}}
+			</ul>
+		</section>
+	</article>
 {{end}}
