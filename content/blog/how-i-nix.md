@@ -18,7 +18,7 @@ why I'm more confident than ever in using nix to package software.
 
 ## Preamble: the Nix Ecosystem
 
-The core parts of the Nix ecosystem, from my persective, are the [language itself](https://github.com/nixos/nix), 
+The core parts of the Nix ecosystem, from my perspective, are the [language itself](https://github.com/nixos/nix), 
 the [nixpkgs package repository](https://github.com/NixOS/nixpkgs/), and 
 the [NixOS modules defined within](https://github.com/NixOS/nixpkgs/tree/master/nixos/modules) that repo.
 These repos ship more than enough for someone to [follow the tutorials at nix.dev](https://nix.dev/tutorials/),

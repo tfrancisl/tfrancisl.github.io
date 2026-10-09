@@ -15,5 +15,6 @@ pkgs.mkShellNoCC {
     pkgs.hugo
     pkgs.git
     pkgs.typst # for rendered documents
+    pkgs.typos
   ];
 }

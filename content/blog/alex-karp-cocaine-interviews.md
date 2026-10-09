@@ -71,7 +71,7 @@ joining Palantir. Who knows how bad it got, how many times he tried to quit, and
 
 Something that happens to people who take lots of cocaine is that they become quite narcissistic at
 times. In my view, this is the why of it. He has strong convictions about the work he does, believing 
-that "securing" the US, Ukraine, and the Israeli state with surveillence tech and killing machines is 
+that "securing" the US, Ukraine, and the Israeli state with surveillance tech and killing machines is 
 essential. He thinks he presents the causes in a convincing way, because he just feels so
 awesome... until he needs another bump. At which point, his interviews tend to fall off the rails.
 He gets jittery, speaks way too fast for his own train of thought, and deflects questions.

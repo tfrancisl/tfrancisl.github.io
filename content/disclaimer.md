@@ -5,5 +5,5 @@ build:
 ---
 
 All opinions and values expressed on this website are my own. Nothing on this site shall be 
-construed as relating to the opinions or values of any employer, government or non-goverment
+construed as relating to the opinions or values of any employer, government or non-government
 organization with which I am affiliated.

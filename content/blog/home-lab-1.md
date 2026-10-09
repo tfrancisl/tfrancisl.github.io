@@ -222,7 +222,7 @@ more services to my home network for various purposes, possibly including git mi
 detection or other suspicious activity detection, and possibly a nix builder for some custom nix packages.
 
 Other than expanding the home lab, I should also look into further isolation of the containers I'm using.
-I could switch all the containers to be unpriveleged, and I could force them to use a private network.
+I could switch all the containers to be unprivileged, and I could force them to use a private network.
 With a private network, the host system would have to specifically bind ports on the containers to
 ports on it's interface, rather than exposing the network interface to the containers to use as they please.
 This isn't super critical since this pi is living on a private network, behind a NAT, with no ports
